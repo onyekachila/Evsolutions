@@ -1,0 +1,9 @@
+factory(App\Modules\Event\Event::class)->create(); // create one
+
+factory(App\Modules\Event\Event::class, 20)->create();   // create multiple
+
+App\Modules\Event\Event::find(1)->with('creator')->first();   // get an event with the creator name
+
+
+
+
