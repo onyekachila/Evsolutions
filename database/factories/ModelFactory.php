@@ -29,7 +29,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
      $end_date = $start_date->copy()->addDays($faker->randomElement([1,2,3,4,5,6,7,8,9,10]));
      return [
          'title' => $faker->sentence(5),
-         'description' => $faker->paragraph(80),
+         'description' => $faker->paragraph(20),
          'address' => $faker->address,
          'lat' => $faker->latitude,
          'lng' => $faker->longitude,
