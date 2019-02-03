@@ -4,6 +4,10 @@ factory(App\Modules\Event\Event::class, 20)->create();   // create multiple
 
 App\Modules\Event\Event::find(1)->with('creator')->first();   // get an event with the creator name
 
+touch database/database.sqlite
+
+vendor/bin/phpunit
+
 
 
 
