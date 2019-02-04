@@ -66,6 +66,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'is_active' => 0,
         ]);
     }
+
+    // protected function registered(Request $request, $user)
+    // {
+    //     Auth::logout();
+    //     return redirect()->route('welcome');
+    // }
 }

@@ -9,8 +9,9 @@
     @yield('header-styles')
 </head>
 <body>
+@include('partials.menu')
     <div class="container">
-        <div class="content-container">
+            <div class="content-container">
             @yield('content')
         </div>
     </div>
