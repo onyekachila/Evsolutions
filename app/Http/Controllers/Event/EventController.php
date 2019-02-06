@@ -35,7 +35,7 @@ class EventController extends Controller
 
     public function add()
     {
-        return view('event.event-add'); 
+        return view('event.event-add');
     }
 
     public function store(Request $request)
@@ -45,7 +45,7 @@ class EventController extends Controller
             'description' => 'required',
             'address' => 'required',
             'start_date' => 'required',
-            'end_date' => 'required',           
+            'end_date' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -60,7 +60,7 @@ class EventController extends Controller
             'address' => $request->input('address'),
             'start_date' => $request->input('start_date'),
             'end_date' => $request->input('end_date'),
-            'user_id' => $request->user()->id,            
+            'user_id' => $request->user()->id,
         ]);
 
         return redirect()->route('events');
